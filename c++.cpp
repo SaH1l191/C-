@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-// // string,sstream,vector,algorithm,limits,math.h,stack,set,unordered_map,climits,string,numeric,<cctype> (string toupper,lower)
+// string,sstream,vector,algorithm,limits,math.h,stack,set,unordered_map,climits,string,numeric,<cctype> (string toupper,lower)
 #define fastio                   \
     ios::sync_with_stdio(false); \
     cin.tie(NULL)
@@ -19,17 +19,96 @@
 
 #define pb push_back
 using namespace std;
-// int n;cin>>n;vi a(n); rep(i,0,n)cin>>a[i];
 
-// int binaryExponentiation(int a , int b){
-//     if(b==0) return 1;
-//     int tmp =  binaryExponentiation(a,b/2);
-//     tmp *=tmp;
-//     if(b%2!=0){
-//         tmp*=a;
-//     }
-//     return tmp ;
-// }
+#define M 1000000007  // Modular constant
+
+template <typename T>
+void sortallRev(vector<T>& arr) {
+    sort(arr.begin(), arr.end(), greater<T>());
+}
+
+template <typename T>
+void sortall(vector<T>& arr) {
+    sort(arr.begin(), arr.end());
+}
+
+template<typename T>
+int binPow(T a, T b){
+    T ans = 1;
+    while(b){
+        if(b & 1){
+            ans = (ans * 1LL * a) % M;
+        }
+        a = (a * 1LL * a) % M;
+        b >>= 1;
+    }
+    return ans;
+}
+
+template <typename T>
+T gcd(T a, T b) {
+    while (b != 0) {
+        T temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}
+
+template <typename T>
+T lcm(T a, T b) {
+    return (a / gcd(a, b)) * b;
+}
+// lcm = (axb) / gcd(a,b)
+
+template <typename T>
+bool odd(T number) {
+    return (number & 1) != 0;
+}
+
+template <typename T>
+bool even(T number) {
+    return (number & 1) == 0;
+}
+
+#ifndef ONLINE_JUDGE
+#define debug(x) cerr << #x <<" "; _print(x); cerr << endl;
+#else
+#define debug(x)
+#endif
+
+void _print(ll t) {cerr << t;}
+void _print(int t) {cerr << t;}
+void _print(string t) {cerr << t;}
+void _print(char t) {cerr << t;}
+void _print(long double t) {cerr << t;}  // Fix: Use long double
+void _print(double t) {cerr << t;}
+void _print(unsigned long long t) {cerr << t;}  // Fix: Use unsigned long long
+
+template <class T, class V> void _print(pair <T, V> p);
+template <class T> void _print(vector <T> v);
+template <class T> void _print(set <T> v);
+template <class T, class V> void _print(map <T, V> v);
+template <class T> void _print(multiset <T> v);
+template <class T, class V> void _print(pair <T, V> p) {cerr << "{"; _print(p.ff); cerr << ","; _print(p.ss); cerr << "}";}
+template <class T> void _print(vector <T> v) {cerr << "[ "; for (T i : v) {_print(i); cerr << " ";} cerr << "]";}
+template <class T> void _print(set <T> v) {cerr << "[ "; for (T i : v) {_print(i); cerr << " ";} cerr << "]";}
+template <class T> void _print(multiset <T> v) {cerr << "[ "; for (T i : v) {_print(i); cerr << " ";} cerr << "]";}
+template <class T, class V> void _print(map <T, V> v) {cerr << "[ "; for (auto i : v) {_print(i); cerr << " ";} cerr << "]";}
+
+//use debug for above utilities - pair,vector,set,multiset,map
+ 
+
+void solve() {
+    // Your problem-solving code here
+    // For example, using debug to check variables
+    vi arr = {1, 4, 3, 9, 6,42,45,234,234,234};
+    debug(arr);
+}
+
+
+
+//some other helpful functions
 
 // struct Node {
 //   public :
@@ -75,23 +154,8 @@ using namespace std;
 //     }
 //     // nlogn
 // }
-// ll findOdd(ll x){
-//     if(x%2==0){
-//         return x/2;
-//     }else{
-//         return (x+1)/2;
-//     }
-// }
-// int gcd(int a, int b)
-// {
-//     // a >b
-//     if (b == 0)
-//     {
-//         return a;
-//     }
-//     // O(min(a,b))
-//     return gcd(b, a % b);
-// }
+
+ 
 
 // struct TreeNode {
 //     int val;
@@ -100,10 +164,25 @@ using namespace std;
 //     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
 // };
 // bool isPrime(int n){if(n<=1)return false;rep(i,2,sqrt(n)+1){if(n%i==0){return false;}}return true;}
-// bool isOdd(int n ){return n%2!=0;}
-// bool isEven(int n ){return n%2==0;}
 
- // vector<int>a = {13,46,24,52,20,9};
+
+
+int main() {
+    //debug purposes
+    #ifndef ONLINE_JUDGE
+    freopen("Error.txt", "w", stderr);
+    #endif
+
+    fastio;
+    int t = 1;
+    // cin >> t;
+    while(t--) {
+        solve();
+    }
+    return 0;
+}
+
+//sorts 
 // void mergeSort(vector<int>&a,int s, int e){
     
 //         int mid = (s+e)/2;
@@ -212,25 +291,3 @@ using namespace std;
     
     //quick sort 
     // quick(a,0,a.size()-1);
-
-
-
-void solve(){
-
-}
-
-
-
-
-
-
-int main()
-{
-    fastio;
-    ll tt = 1;
-    // cin >> tt;
-    while (tt--)
-    {
-        solve();
-    }
-}
