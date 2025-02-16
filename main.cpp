@@ -1,9 +1,13 @@
-    #include <bits/stdc++.h>
+// CTRL+B to run file
+// Read for reading vector(snippet)
+// YES/NO for cout(snippet)
+// include for cptemplate(snippet)
+#include <bits/stdc++.h>
 // string,sstream,vector,algorithm,limits,math.h,stack,set,unordered_map,climits,string,numeric,<cctype> (string toupper,lower)
 #define fastio                   \
     ios::sync_with_stdio(false); \
     cin.tie(NULL)
-#define endl '\n'
+#define nl '\n'
 #define rep(i, l, r) for (int i = l; i < r; i++)
 #define vl vector<long long>
 #define usi unordered_set<int>
@@ -42,17 +46,14 @@ ostream &operator<<(ostream &ostream, const vector<T> &c)
 }
 
 void solve() {
- int n;
-    cin >> n;
-    vector<int> a(n);
-    cin >> a; //read vector
-    cout << a; //output vector
-    cout<<endl;
+
+
 
 }
 
 int main() {
     fastio;
+
     int t = 1;
     cin >> t;
     while(t--)  solve();
