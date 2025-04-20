@@ -23,9 +23,7 @@
 #define pb push_back
 #define minpq priority_queue<int, vector<int>, greater<int>>
 #define pq priority_queue<int>
-#define M 1000000007
-#define F first
-#define S second
+#define vll vector<vector<long long>>
 using namespace std;
 using ll = long long;
 
@@ -46,16 +44,15 @@ ostream &operator<<(ostream &ostream, const vector<T> &c)
 }
 
 void solve() {
-
-
+    vvi a;
 
 }
+
 
 int main() {
     fastio;
 
-    int t = 1;
-    cin >> t;
+    int t = 1;cin>>t;
     while(t--)  solve();
     return 0;
 }
